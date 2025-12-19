@@ -1,0 +1,42 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="ShewhartChartsContinuous.js" />
+	<help file="ShewhartChartsContinuous.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Shewhart Charts (Continuous)">
+		<row id="row_vDVVMGVVSS">
+			<varselector id="cont_selector" />
+			<column id="clm_vDVVMGVVSS">
+				<varslot id="cont_data" label="Data Variable (Vector or Matrix)" source="cont_selector" required="true" />
+				<varslot id="cont_group" label="Grouping Variable (for Vectors)" source="cont_selector" />
+				<frame label="Settings" id="frm_Settings">
+					<dropdown id="cont_type" label="Chart Type">
+						<option label="xbar (Mean)" value="xbar" checked="true" />
+						<option label="R (Range)" value="R" />
+						<option label="S (Standard Deviation)" value="S" />
+						<option label="xbar.one (Individuals)" value="xbar.one" />
+					</dropdown>
+					<input label="Chart Title" id="cont_title" />
+					<input label="X Label" id="cont_xlab" />
+				</frame>
+				<saveobject label="Save QCC Object as" checkable="true" checked="true" initial="qcc_object" id="cont_save_obj" />
+				<preview label="Preview" id="prv_Preview" />
+			</column>
+		</row>
+	</dialog>
+</document>

@@ -1,0 +1,47 @@
+<!DOCTYPE rkhelp >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<title>
+		Shewhart Attributes
+	</title>
+	<summary>
+	</summary>
+	<usage>
+	</usage>
+	<!--
+		<section id="sct_EDITORDE" title="EDIT OR DELETE ME">
+			EDIT OR DELETE ME
+		</section>
+	-->
+	<settings>
+		<setting id="attr_data">
+		</setting>
+		<caption id="frm_SamplSzs" />
+		<setting id="attr_size_mode">
+		</setting>
+		<setting id="attr_size_var">
+		</setting>
+		<setting id="attr_size_const">
+		</setting>
+		<setting id="attr_type">
+		</setting>
+		<setting id="attr_title">
+		</setting>
+		<setting id="attr_save_obj">
+		</setting>
+	</settings>
+	<!--
+		<related>
+			<ul>
+				<li>
+					<link href="rkward://rhelp/..." />
+				</li>
+			</ul>
+		</related>
+	-->
+	<technical>
+	</technical>
+</document>

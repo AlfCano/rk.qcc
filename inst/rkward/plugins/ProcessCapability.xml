@@ -1,0 +1,36 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="ProcessCapability.js" />
+	<help file="ProcessCapability.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Process Capability">
+		<row id="row_vSQCCOSSLS">
+			<varselector id="cap_selector" />
+			<column id="clm_vSQCCOSSLS">
+				<varslot id="cap_obj" label="Select QCC Object" source="cap_selector" classes="qcc" required="true" />
+				<frame label="Specifications" id="frm_Spcfctns">
+					<input label="Lower Spec Limit (LSL)" id="cap_lsl" />
+					<input label="Upper Spec Limit (USL)" id="cap_usl" />
+					<input label="Target Value (Optional)" id="cap_target" />
+				</frame>
+				<checkbox id="cap_auto_break" label="Automatic Breaks" value="1" checked="true" />
+				<preview label="Preview" id="prv_Preview" />
+			</column>
+		</row>
+	</dialog>
+</document>

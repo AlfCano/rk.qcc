@@ -1,0 +1,46 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="ShewhartAttributes.js" />
+	<help file="ShewhartAttributes.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Attribute Charts">
+		<row id="row_vCVDDSSSSS">
+			<varselector id="attr_selector" />
+			<column id="clm_vCVDDSSSSS">
+				<varslot id="attr_data" label="Count Variable (Defects/Defectives)" source="attr_selector" required="true" />
+				<frame label="Sample Sizes" id="frm_SamplSzs">
+					<radio id="attr_size_mode" label="Sample Size Source">
+						<option label="Variable" value="var" checked="true" />
+						<option label="Constant" value="const" />
+					</radio>
+					<varslot id="attr_size_var" label="Sample Size Variable" source="attr_selector" />
+					<input label="Constant Sample Size" id="attr_size_const" initial="50" />
+				</frame>
+				<dropdown id="attr_type" label="Chart Type">
+					<option label="p (Proportion)" value="p" checked="true" />
+					<option label="np (Count of Defectives)" value="np" />
+					<option label="c (Count of Defects)" value="c" />
+					<option label="u (Rate of Defects)" value="u" />
+				</dropdown>
+				<input label="Chart Title" id="attr_title" />
+				<saveobject label="Save QCC Object as" checkable="true" checked="true" initial="qcc_attr_object" id="attr_save_obj" />
+				<preview label="Preview" id="prv_Preview" />
+			</column>
+		</row>
+	</dialog>
+</document>

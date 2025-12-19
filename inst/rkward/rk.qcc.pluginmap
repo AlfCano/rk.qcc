@@ -1,0 +1,117 @@
+<!DOCTYPE
+	rkpluginmap
+>
+<document
+	base_prefix=""
+	namespace="ShewhartChartsContinuous"
+	id="ShewhartChartsContinuous_rkward"
+	po_id="ShewhartChartsContinuous_rkward"
+	priority="medium"
+>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<about
+		name="rk.qcc"
+		shortinfo="An RKWard plugin package for Quality Control Charts and Capability Analysis using the 'qcc' library."
+		longinfo="An RKWard plugin package for Quality Control Charts and Capability Analysis using the 'qcc' library."
+		version="0.0.1"
+		releasedate="2025-12-18"
+		url="https://github.com/AlfCano/rk.qcc"
+		license="GPL (&gt;= 3)"
+	>
+		<author
+			given="Alfonso"
+			family="Cano"
+			email="alfonso.cano@correo.buap.mx"
+			role="aut, cre"
+		/>
+	</about>
+	<require
+		map="rkward::menu"
+	/>
+	<require
+		map="rkward::embedded"
+	/>
+	<components>
+		<component
+			id="cmp_ShwhrtChrtsCntnsShwhrtAtt"
+			label="Shewhart Attributes"
+			type="standard"
+			file="plugins/ShewhartAttributes.xml"
+		>
+		</component>
+		<component
+			id="cmp_ShwhrtChrtsCntnsPrcssCpbl"
+			label="Process Capability"
+			type="standard"
+			file="plugins/ProcessCapability.xml"
+		>
+		</component>
+		<component
+			id="cmp_ShwhrtChrtsCntnsShwhrtChC"
+			label="Shewhart Charts (Continuous)"
+			type="standard"
+			file="plugins/ShewhartChartsContinuous.xml"
+		>
+		</component>
+	</components>
+	<hierarchy>
+		<menu
+			id="analysis"
+			label="Analysis"
+		>
+			<menu
+				id="QualityControlqcc"
+				label="Quality Control (qcc)"
+			>
+				<entry
+					component="cmp_ShwhrtChrtsCntnsShwhrtAtt"
+				/>
+			</menu>
+		</menu>
+		<menu
+			id="analysis"
+			label="Analysis"
+		>
+			<menu
+				id="QualityControlqcc"
+				label="Quality Control (qcc)"
+			>
+				<entry
+					component="cmp_ShwhrtChrtsCntnsPrcssCpbl"
+				/>
+			</menu>
+		</menu>
+		<menu
+			id="analysis"
+			label="Analysis"
+		>
+			<menu
+				id="QualityControlqcc"
+				label="Quality Control (qcc)"
+			>
+				<entry
+					component="cmp_ShwhrtChrtsCntnsShwhrtChC"
+				/>
+			</menu>
+		</menu>
+	</hierarchy>
+	<!--
+		<context
+			id="x11"
+		>
+		</context>
+	-->
+	<!--
+		<context
+			id="import"
+		>
+		</context>
+	-->
+</document>
